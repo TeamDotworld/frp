@@ -22,7 +22,6 @@ import (
 
 	_ "github.com/fatedier/frp/assets/frpc"
 	"github.com/fatedier/frp/cmd/frpc/sub"
-
 	"github.com/fatedier/golib/crypto"
 )
 
