@@ -15,7 +15,9 @@
 package main
 
 import (
+	"context"
 	"math/rand"
+	"net"
 	"time"
 
 	_ "github.com/fatedier/frp/assets/frpc"
@@ -25,6 +27,18 @@ import (
 )
 
 func main() {
+	var dialer net.Dialer
+	net.DefaultResolver = &net.Resolver{
+		PreferGo: false,
+		Dial: func(context context.Context, network, _ string) (net.Conn, error) {
+			conn, err := dialer.DialContext(context, network, "8.8.8.8:53")
+			if err != nil {
+				return nil, err
+			}
+			return conn, nil
+		},
+	}
+
 	crypto.DefaultSalt = "frp"
 	rand.Seed(time.Now().UnixNano())
 
