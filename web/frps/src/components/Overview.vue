@@ -134,7 +134,7 @@
               }).catch( err => {
                   this.$message({
                       showClose: true,
-                      message: 'Get server info from frps failed!',
+                      message: 'Get server info from dotworld failed!',
                       type: 'warning'
                     })
               })

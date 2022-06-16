@@ -2,7 +2,7 @@
     <div id="app">
         <header class="grid-content header-color">
             <el-row>
-                <a class="brand" href="#">frp client</a>
+                <a class="brand" href="#">Dotworld client</a>
             </el-row>
         </header>
         <section>

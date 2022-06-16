@@ -23,7 +23,7 @@ export default {
               }).catch( err => {
                   this.$message({
                       showClose: true,
-                      message: 'Get server info from frps failed!' + err,
+                      message: 'Get server info from dotworld failed!' + err,
                       type: 'warning'
                     })
               })
